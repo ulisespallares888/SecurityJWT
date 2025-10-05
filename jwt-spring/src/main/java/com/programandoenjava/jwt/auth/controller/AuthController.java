@@ -56,7 +56,7 @@ public class AuthController {
 
     @PostMapping("/logout")
     public ResponseEntity<Void> logout() {
-        // Eliminar la cookie estableciéndola vacía y expirando inmediatamente comentari o
+        // Eliminar la cookie estableciéndola vacía y expirando inmediatamente comentario
         ResponseCookie cookie = ResponseCookie.from("jwt", "")
                 .httpOnly(true)
                 .path("/")
